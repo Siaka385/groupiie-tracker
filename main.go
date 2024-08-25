@@ -3,11 +3,12 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"groupiie-tracker/myfunc"
 	"html/template"
 	"io"
 	"log"
 	"net/http"
+
+	"groupiie-tracker/myfunc"
 )
 
 // Artist struct represents the data model for each artist
@@ -43,13 +44,13 @@ func Handle(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// mytrial := Myartists{
-	// 	Mydata: myartist,
-	// }
+	mytrial := Myartists{
+		Mydata: myartist,
+	}
 
 	tmp, _ := template.ParseFiles("index.html")
 
-	tmp.Execute(w, nil)
+	tmp.Execute(w, mytrial)
 }
 
 func main() {
