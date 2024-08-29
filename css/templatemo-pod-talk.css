@@ -260,7 +260,27 @@ main {
 .site-header h2 {
   color: var(--white-color);
 }
-
+#suggestions{
+ 
+  display: block; 
+  max-height: 200px;   
+  position: absolute; 
+  z-index: 1000; 
+  width: 20%; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  border:none;
+}
+.suggestion-item{
+  padding: 10px; 
+  cursor: pointer; 
+  font-family: Arial, sans-serif; 
+  font-size: 20px;
+  background-color: #fff;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: 5px;
+  width: 100%;
+}
 
 /*---------------------------------------
   NAVIGATION              
@@ -480,6 +500,7 @@ main {
   background-size: 108% 76%;
   background-position: top;
   padding-top: 200px;
+  
 }
 
 .owl-carousel {

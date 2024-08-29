@@ -1,71 +1,55 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
-	"html/template"
-	"io"
 	"log"
 	"net/http"
 
-	"groupiie-tracker/myfunc"
+	"groupie-tracker/handlers"
+	//"groupie-tracker/models"
+	//"groupie-tracker/api"
+
 )
 
-// Artist struct represents the data model for each artist
-type Artist struct {
-	Id           int      `json:"id"`
-	Name         string   `json:"NAME"`
-	Image        string   `json:"image"`
-	Members      []string `json:"members"`
-	CreationDate int      `json:"creationdate"`
-	FirstAlbum   string   `json:"firstalbum"`
-}
-
-// Myartists struct contains a slice of Artist structs
-type Myartists struct {
-	Mydata []Artist
-}
-
-// Handle function serves the parsed artist data as JSON
-func Handle(w http.ResponseWriter, r *http.Request) {
-	response, err := http.Get("https://groupietrackers.herokuapp.com/api/artists")
-	if err != nil {
-		http.Error(w, "Failed to fetch data", http.StatusInternalServerError)
-		return
-	}
-	defer response.Body.Close()
-
-	data, _ := io.ReadAll(response.Body)
-	var myartist []Artist
-
-	jsonErr := json.Unmarshal(data, &myartist)
-	if jsonErr != nil {
-		http.Error(w, "Failed to parse JSON", http.StatusInternalServerError)
-		return
-	}
-
-	mytrial := Myartists{
-		Mydata: myartist,
-	}
-
-	tmp, _ := template.ParseFiles("index.html")
-
-	tmp.Execute(w, mytrial)
-}
-
 func main() {
+	mux := http.NewServeMux()
 
-	http.HandleFunc("/css/", myfunc.StaticServer)
-	http.HandleFunc("/fonts/", myfunc.StaticServer)
-	http.HandleFunc("/images/", myfunc.StaticServer)
-	http.HandleFunc("/js/", myfunc.StaticServer)
+	mux.HandleFunc("/css/", handlers.StaticServer)
+	mux.HandleFunc("/fonts/", handlers.StaticServer)
+	mux.HandleFunc("/images/", handlers.StaticServer)
+	mux.HandleFunc("/js/", handlers.StaticServer)
 
 	// Set up the HTTP server and route
-	http.HandleFunc("/", Handle)
-
+	mux.HandleFunc("/", handlers.Homepage)
+	mux.HandleFunc("/artist", handlers.Artinfo)
+	mux.HandleFunc("/search", handlers.SearchBar)
 	// Start the server on port 8080
-	fmt.Println("Server is running on port 8080...")
-	if err := http.ListenAndServe(":8089", nil); err != nil {
+	fmt.Println("Server is running on port 8089...")
+	if err := http.ListenAndServe(":8089", mux); err != nil {
 		log.Fatal("ListenAndServe: ", err)
 	}
 }
+
+// Fetch and print data from the API used for testing purposes
+
+// 	locations, err := api.FetchLocations()
+// 	if err != nil {
+// 	    fmt.Println("Error fetching locations:", err)
+// 	    return
+// 	}
+// 	fmt.Printf("Locations: %+v\n", locations) // Print locations to use the variable
+
+// 	dates, err := api.FetchDates()
+// 	if err != nil {
+// 	    fmt.Println("Error fetching dates:", err)
+// 	    return
+// 	}
+// 	fmt.Printf("Dates: %+v\n", dates) // Print dates to use the variable
+
+// 	relations, err := api.FetchRelations()
+// 	 if err != nil {
+// 	   fmt.Println("Error fetching relations:", err)
+// 	    return
+// 	}
+// 	fmt.Printf("Relations: %+v\n", relations) // Print relations to use the variable
+// }
