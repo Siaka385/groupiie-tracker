@@ -9,8 +9,14 @@ import (
 	"groupie-tracker/models"
 )
 
-func SearchBar(w http.ResponseWriter, r *http.Request) {
+func HandleManualSearch(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
+
+	if r.Method != "GET" {
+		http.Redirect(w, r, "/wrongmethod", http.StatusMethodNotAllowed)
+		return
+	}
+
 	Artistname := r.FormValue("search")
 
 	artists, err := api.FetchArtists()
@@ -20,12 +26,17 @@ func SearchBar(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var artistinfomation models.Artist
-
+	found := false
 	for _, musicartist := range artists {
 		if tolowercase(musicartist.Name) == tolowercase(Artistname) {
 			artistinfomation = musicartist
+			found = true
 			break
 		}
+	}
+	if !found {
+		http.Redirect(w, r, "/badrequest", http.StatusFound)
+		return
 	}
 
 	http.Redirect(w, r, fmt.Sprintf("/artist?id=%v", artistinfomation.ID), http.StatusFound)
