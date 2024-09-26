@@ -1020,6 +1020,32 @@ main {
 }
 
 
+/* Media Query for Phones */
+@media only screen and (max-width: 600px) {
+  .custom-form .form-control {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    padding: 8px 12px; /* Adjust padding for smaller screens */
+  }
+
+  .custom-form button[type="submit"] {
+    font-size: 14px; /* Adjust font size for the button */
+    padding: 8px 16px; /* Adjust padding for the button */
+    margin-bottom: 16px; /* Add some space below the button */
+  }
+
+  .search-form .form-control {
+    font-size: 14px; /* Adjust font size for the search input */
+  }
+
+  .search-form button[type="submit"] {
+    max-width: 30px; /* Adjust button width for smaller screens */
+    height: auto; /* Adjust height for smaller screens */
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+}
+
+
+
 /*---------------------------------------
   SITE FOOTER              
 -----------------------------------------*/
