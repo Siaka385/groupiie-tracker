@@ -10,9 +10,8 @@ func Aboutus(w http.ResponseWriter, r *http.Request) {
 	isfilepresent, _ := Checkfile("./", "about.html")
 
 	if !isfilepresent {
-		http.Redirect(w, r, "/404", http.StatusFound)
+		http.Redirect(w, r, "/500", http.StatusFound)
 		return
-
 	}
 
 	tmp, _ := template.ParseFiles("about.html")

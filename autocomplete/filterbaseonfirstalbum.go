@@ -44,4 +44,3 @@ func FirstAlbums(albumDate string, w http.ResponseWriter, r *http.Request) {
 	// Execute the template and pass in the band data to render the page
 	tmp.Execute(w, band)
 }
-

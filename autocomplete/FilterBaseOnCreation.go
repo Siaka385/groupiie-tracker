@@ -8,10 +8,11 @@ import (
 	"groupie-tracker/handlers"
 	"groupie-tracker/models"
 )
+
 type Creationbands struct {
 	Title    string          // Title of the page
 	Pagedesc string          // Description of the page
-	Mydata   []models.Artist  // Slice of Artist structs filtered by creation date
+	Mydata   []models.Artist // Slice of Artist structs filtered by creation date
 }
 
 // CreationDate generates a page displaying bands created in a specified year

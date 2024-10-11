@@ -3,8 +3,10 @@ package autocomplete
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
+	"os"
+	"sort"
 	"strings"
 )
 
@@ -21,7 +23,7 @@ func HandleSearchSuggestions(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Read the request body to retrieve the search key
-	body, err := ioutil.ReadAll(r.Body)
+	body, err := io.ReadAll(r.Body)
 	if err != nil {
 		http.Error(w, "Unable to read request body", http.StatusBadRequest) // Handle error in reading request body
 		return
@@ -48,11 +50,14 @@ func GenerateSearchSuggestions(m string) {
 
 	// Loop through the suggestions and find those that match the search key
 	for i := 0; i < len(SuggestionItems); i++ {
-		// Check if the suggestion name starts with the search key, case-insensitive
-		if strings.HasPrefix(strings.ToLower(SuggestionItems[i].Name), strings.ToLower(m)) {
+		if strings.Contains(strings.ToLower(SuggestionItems[i].Name), strings.ToLower(m)) {
 			autocompleteitems = append(autocompleteitems, SuggestionItems[i])
 		}
 	}
+
+	sort.Slice(autocompleteitems, func(i, j int) bool {
+		return autocompleteitems[i].Name < autocompleteitems[j].Name
+	})
 
 	// Marshal the matching suggestions into JSON format
 	jsondata, err := json.MarshalIndent(autocompleteitems, "", " ")
@@ -61,11 +66,8 @@ func GenerateSearchSuggestions(m string) {
 	}
 
 	// Write the JSON data into the search.json file
-	err = ioutil.WriteFile("./js/search.json", jsondata, 0o644)
+	err = os.WriteFile("./js/search.json", jsondata, 0o644)
 	if err != nil {
 		fmt.Println("failed to save JSON to file:")
 	}
-
-	// Log that the data was successfully saved
-	fmt.Println("Data saved successfully")
 }

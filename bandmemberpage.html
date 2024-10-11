@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>music legend- artist information</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sono:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+                        
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="css/bootstrap-icons.css">
+
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+        <link href="css/templatemo-pod-talk.css" rel="stylesheet">
+<!--
+
+TemplateMo 584 Pod Talk
+
+https://templatemo.com/tm-584-pod-talk
+
+-->
+<style>
+.suggestions{
+ display: block; 
+ max-height: 300px;   
+ position: absolute; 
+ z-index: 1000; 
+ width: 25%;
+ box-shadow: 3px;
+}
+.suggestion-item{
+ padding: 10px; 
+ cursor: pointer; 
+ font-family: Arial, sans-serif; 
+ font-size: 20px;
+ background-color: #fff;
+ border: 2px solid white;
+ border-radius: 10px;
+ margin: 5px;
+ width: 100%;
+}
+
+ul{
+    list-style-type: none;
+}
+ 
+h1 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .timeline {
+    position: relative;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 1300px;
+  }
+  
+  .timeline:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    border: 1px solid #00CC99;
+    right: 40px;
+    top: 0;
+  }
+  
+  .timeline:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  
+/* Media query for phone-sized screens (max-width: 600px) */
+@media only screen and (max-width: 1200px) {
+.suggestion-item{
+    font-size: 10px;
+    
+}
+.suggestions{
+    width: 50%;
+    max-height: 100px;
+}
+
+.ms-4{
+    display: none;
+}
+#logo{
+    width: 90px;
+ }  
+
+}
+  
+  @media screen and (min-width: 700px) {
+    .timeline {
+      padding: 2rem;
+    }
+  
+    .timeline:before {
+      left: calc(50% - 1px);
+      right: auto;
+    }
+  }
+  
+  .timeline__item {
+    padding: 1rem;
+    border: 2px solid #00CC99;
+    border-image: linear-gradient(to right, hsl(197, 71%, 73%) 0%, #00CC99 100%);
+    border-image-slice: 1;
+    position: relative;
+    margin: 1rem 3rem 1rem 1rem;
+    clear: both;
+  }
+  
+  .timeline__item:after,
+  .timeline__item:before {
+    content: '';
+    position: absolute;
+  }
+  
+  .timeline__item:before {
+    right: -10px;
+    top: calc(50% - 5px);
+    border-style: solid;
+    border-color:#00CC99  #00CC99 transparent transparent;
+    border-width: 10px;
+    transform: rotate(45deg);
+  }
+  
+  @media screen and (min-width: 700px) {
+    .timeline__item {
+      width: 44%;
+      margin: 1rem;
+    }
+  
+    .timeline__item:nth-of-type(2n) {
+      float: right;
+      margin: 1rem;
+      border-image: linear-gradient(to right, #00CC99 0%,   hsl(197, 71%, 73%) 100%);
+      border-image-slice: 1;
+    }
+  
+    .timeline__item:nth-of-type(2n):before {
+      right: auto;
+      left: -10px;
+      border-color: transparent transparent #00CC99 #00CC99;
+    }
+  }
+
+  
+  .timeline__item--year {
+    text-align: center;
+    max-width: 150px;
+    margin: 0 48px 0 auto;
+    font-size: 1rem;
+    background-color: bisque;
+    line-height: 1;
+    border-image: none;
+    padding: .5rem 1rem 1rem;
+  }
+  
+  .timeline__item--year:before {
+    display: none;
+  }
+  
+  @media screen and (min-width: 700px) {
+    .timeline__item--year {
+      text-align: center;
+      margin: 0 auto;
+    }
+  
+    .timeline__item--year:nth-of-type(2n) {
+      float: none;
+      margin: 0 auto;
+      border-image: none;
+    }
+  
+    .timeline__item--year:nth-of-type(2n):before {
+      display: none;
+    }
+  }
+  
+  .timeline__title {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+  }
+  
+  .timeline__blurb {
+    line-height: 1.5;
+    font-size: 1rem;
+    margin: .5rem 0 0;
+  }
+</style>
+    </head>
+    
+    <body>
+
+        <main>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand me-lg-5 me-0" href="/">
+                        <img src="images/logoo.png" class="logo-image img-fluid" alt="templatemo pod talk">
+                    </a>
+                    <form action="/search" method="get" class="custom-form search-form flex-fill me-3" role="search" autocomplete="off">
+                        <div class="input-group input-group-lg">    
+                            <input name="search" type="search" class="form-control" id="search" placeholder="Search Artist" aria-label="Search" oninput="showSuggestions(this.value)" required>
+                    
+                            <button type="submit" class="form-control" id="submit">
+                                <i class="bi-search"></i>
+                            </button>
+                        </div>
+                        
+                         <!-- Suggestion Box -->
+                         <ul class="suggestions" style="overflow-y: auto;overflow-x: hidden;">
+                        </ul>
+                        
+                        
+                    </form>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about">About</a>
+                            </li>
+                        </ul>
+
+                        <div class="ms-4">
+                            <a href="/explore" class="btn custom-btn custom-border-btn smoothscroll">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+
+             <header class="site-header d-flex flex-column justify-content-center align-items-center">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12 text-center">
+                            
+                            <h2 class="mb-0">{{.Bandmember}}, a vital note in the melody of the iconic band {{.Name}}</h2>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+            <section class="latest-podcast-section section-padding pb-0" id="section_2">
+                <div class="container">
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-12 col-12">
+                            <div class="section-title-wrap mb-5">
+                                <h4 class="section-title">Band info</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block d-flex">
+                                <div class="">
+                                    <div class="custom-block-icon-wrap">
+                                        <div class="section-overlay"></div>
+                                        <a href="detail-page.html" class="custom-block-image-wrap">
+                                            <img src={{.Image}} class="custom-block-image img-fluid" alt="">
+
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                <div class="custom-block-info">
+            
+                                    <h5 class="mb-2">
+                                        <a href="detail-page.html">
+                                            THE ICONIC {{.Name}} BAND
+                                        </a>
+                                    </h5>
+
+                                    <div class="profile-block d-flex">
+                                       
+                                        
+                                        <p>
+                                        <strong> CREATED ON : {{.CreationDate}}</strong>
+                                        <strong>THEIR FIRST ALBUM ON: {{.FirstAlbum}}</strong>
+                                            </p>
+                                    </div>
+
+                                    <p class="mb-0">Feel the Rhythm, Live the Beat</p>
+
+                                </div>
+
+                                <div class="d-flex flex-column ms-auto">
+                                    <a href="#" class="badge ms-auto">
+                                        <i class="bi-heart"></i>
+                                    </a>
+
+                                    <a href="#" class="badge ms-auto">
+                                        <i class="bi-bookmark"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="topics-section section-padding pb-0" id="section_3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-12">
+                            <div class="section-title-wrap mb-5">
+                                <h4 class="section-title">Band Members</h4>
+                            </div>
+                        </div>
+                            {{range .Members}}   
+                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block custom-block-overlay">
+                                
+                                <div class="custom-block-info custom-block-overlay-info" style="background-color: bisque;">
+                                    <h5 class="mb-1">
+                                        <a>
+                                            {{.}}
+                                        </a>
+                                    </h5>
+
+                                    <p class="badge mb-0">Band Member</p>
+                                </div>
+                            </div>
+                        </div>
+                          {{end}}
+                       
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="trending-podcast-section section-padding">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12">
+                            <div class="section-title-wrap mb-5">
+                                <h4 class="section-title">Timeline</h4>
+                            </div>
+                        </div>
+
+      
+                        
+                        <div class="timeline">
+  
+                             {{range .Relation}}
+                            <h2 class="timeline__item timeline__item--year">{{index . 1}}</h2>
+                            
+                            <div class="timeline__item" style="background-color: bisque;"> 
+                              <h3 class="timeline__title">{{index . 0}}</h3>
+                              <p class="badge mb-0">location</p>
+                            </div>
+                            {{end}}
+  
+                          </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="topics-section section-padding pb-0" id="section_3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-12">
+                            <div class="section-title-wrap mb-5">
+                                <h4 class="section-title">  Places ever performed</h4>
+                            </div>
+                        </div>
+                            {{range .Locate}}   
+                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block custom-block-overlay">
+                                
+                                <div class="custom-block-info custom-block-overlay-info" style="background-color: bisque;">
+                                    <h5 class="mb-1">
+                                        <a>
+                                            {{.}}
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                          {{end}}
+                       
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="topics-section section-padding pb-0" id="section_3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-12">
+                            <div class="section-title-wrap mb-5">
+                                <h4 class="section-title">Dates of all performance</h4>
+                            </div>
+                        </div>
+                            {{range .Datess}}   
+                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block custom-block-overlay">
+                                
+                                <div class="custom-block-info custom-block-overlay-info" style="background-color: bisque;">
+                                    <h5 class="mb-1">
+                                        <a>
+                                            {{.}}
+                                        </a>
+                                    </h5>
+
+                            
+                                </div>
+                            </div>
+                        </div>
+                          {{end}}
+                       
+                    </div>
+                </div>
+            </section>
+
+
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/autocomplete.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>

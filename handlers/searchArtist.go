@@ -22,6 +22,7 @@ func HandleManualSearch(w http.ResponseWriter, r *http.Request) {
 	artists, err := api.FetchArtists()
 	if err != nil {
 		fmt.Println("Error fetching artists:", err)
+		http.Redirect(w, r, "/500", http.StatusFound)
 		return
 	}
 

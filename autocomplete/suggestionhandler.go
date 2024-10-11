@@ -14,6 +14,8 @@ func HandleAutocompleteSelection(w http.ResponseWriter, r *http.Request) {
 		CreationDate(path, w, r)
 	} else if CheckFirstAlbum(path) {
 		FirstAlbums(path, w, r)
+	} else if checkifbandmember(path) {
+		MemberDisplay(w, r, path)
 	} else {
 		Locations(path, w, r)
 	}
@@ -23,6 +25,10 @@ func CheckIfCreationdate(date string) bool {
 	_, err := strconv.Atoi(strings.TrimSpace(date))
 
 	return err == nil
+}
+
+func checkifbandmember(member string) bool {
+	return strings.Contains(member, "-bandmember-")
 }
 
 func CheckFirstAlbum(date string) bool {

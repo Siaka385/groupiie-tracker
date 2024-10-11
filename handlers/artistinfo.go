@@ -12,69 +12,75 @@ import (
 	"groupie-tracker/api"
 	"groupie-tracker/models"
 )
+
 func Artinfo(w http.ResponseWriter, r *http.Request) {
-    // Ensure the method is GET
-    if r.Method != http.MethodGet {
-        http.Redirect(w, r, "/wrongmethod", http.StatusMethodNotAllowed)
-        return
-    }
+	// Ensure the method is GET
+	if r.Method != http.MethodGet {
+		http.Redirect(w, r, "/wrongmethod", http.StatusMethodNotAllowed)
+		return
+	}
 
-    // Get the artist ID from the query string
-    name := r.URL.Query().Get("id")
-    id, err := strconv.Atoi(name)
-    if err != nil || id < 1 || id > 52 {
-        http.Redirect(w, r, "/404error", http.StatusFound)
-        return
-    }
+	// Get the artist ID from the query string
+	name := r.URL.Query().Get("id")
+	id, err := strconv.Atoi(name)
+	if err != nil {
+		http.Redirect(w, r, "/badrequest", http.StatusFound)
+		return
+	}
 
-    // Fetch the list of artists
-    artists, err := api.FetchArtists()
-    if err != nil {
-        fmt.Println("Error fetching artists:", err)
-        http.Redirect(w, r, "/500", http.StatusFound)
-        return
-    }
+	// Fetch the list of artists
+	artists, err := api.FetchArtists()
+	if err != nil {
+		fmt.Println("Error fetching artists:", err)
+		http.Redirect(w, r, "/500", http.StatusFound)
+		return
+	}
 
-    // Find the artist with the specified ID
-    var artistInfo models.Artist
-    found := false
-    for _, musicArtist := range artists {
-        if musicArtist.ID == id {
-            artistInfo = musicArtist
-            found = true
-            break
-        }
-    }
+	// Find the artist with the specified ID
+	var artistInfo models.Artist
+	found := false
+	for _, musicArtist := range artists {
+		if musicArtist.ID == id {
+			artistInfo = musicArtist
+			found = true
+			break
+		}
+	}
 
-    // If no artist found, redirect to 404
-    if !found {
-        http.Redirect(w, r, "/404error", http.StatusFound)
-        return
-    }
+	// If no artist found, redirect to 404
+	if !found {
+		http.Redirect(w, r, "/404error", http.StatusFound)
+		return
+	}
 
-    // Fetch and set the artist's timeline (relations)
-    artistInfo.Relation = Timeline(id)
-    artistInfo.Locate = Locations(id)
-    artistInfo.Datess = Dates(id)
+	// Fetch and set the artist's timeline (relations)
+	artistInfo.Relation = Timeline(id)
+	if artistInfo.Relation == nil {
+		http.Redirect(w, r, "/500", http.StatusFound)
+		return
+	}
+	artistInfo.Locate = Locations(id)
+	if artistInfo.Locate == nil {
+		http.Redirect(w, r, "/500", http.StatusFound)
+		return
+	}
+	artistInfo.Datess = Dates(id)
+	if artistInfo.Datess == nil {
+		http.Redirect(w, r, "/500", http.StatusFound)
+		return
+	}
 
-    // Check if the artist information template exists
-    isFilePresent, _ := Checkfile("./", "artistinformation.html")
-    if !isFilePresent {
-        http.Redirect(w, r, "/404", http.StatusFound)
-        return
-    }
+	// Parse and execute the template with the artist information
+	tmpl, err := template.ParseFiles("artistinformation.html")
+	if err != nil {
+		http.Redirect(w, r, "/500", http.StatusFound)
+		return
+	}
 
-    // Parse and execute the template with the artist information
-    tmpl, err := template.ParseFiles("artistinformation.html")
-    if err != nil {
-        http.Redirect(w, r, "/500", http.StatusFound)
-        return
-    }
-
-    // Execute the template (no redirects after this point)
-    if err := tmpl.Execute(w, artistInfo); err != nil {
-        http.Redirect(w, r, "/500", http.StatusFound)
-    }
+	// Execute the template (no redirects after this point)
+	if err := tmpl.Execute(w, artistInfo); err != nil {
+		http.Redirect(w, r, "/500", http.StatusFound)
+	}
 }
 
 // Create a new artist info object from the artist info template and return it as a string in the format

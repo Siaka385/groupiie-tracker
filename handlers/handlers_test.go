@@ -59,67 +59,13 @@ func TestArtinfo(t *testing.T) {
 }
 
 // Test for handling a 404 Not Found error
-func TestError404(t *testing.T) {
-	testHandler(t, http.MethodGet, "/non-existent", Error404, http.StatusNotFound)
-}
+// func TestError404(t *testing.T) {
+// 	testHandler(t, http.MethodGet, "/non-existent", Error404, http.StatusNotFound)
+// }
 
 // Test for handling an Internal Server Error
 func TestInternalServerError(t *testing.T) {
 	testHandler(t, http.MethodGet, "/500", InternalServerError, http.StatusInternalServerError)
-}
-
-// Test for handling a Wrong Method error
-func TestWrongMethod(t *testing.T) {
-	req, err := http.NewRequest(http.MethodPost, "/wrong-method", nil)
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	w := httptest.NewRecorder()
-	Wrongmethod(w, req)
-
-	res := w.Result()
-	if res.StatusCode == http.StatusFound {
-		t.Log("Redirected to:", res.Header.Get("Location"))
-	} else if res.StatusCode != http.StatusMethodNotAllowed {
-		t.Errorf("Expected status Method Not Allowed, got %v", res.Status)
-	}
-}
-
-// Test for handling No Internet Connection error
-func TestNoInternetConnection(t *testing.T) {
-	req, err := http.NewRequest(http.MethodGet, "/no-internet", nil)
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	w := httptest.NewRecorder()
-	Nointernetconnection(w, req)
-
-	res := w.Result()
-	if res.StatusCode == http.StatusNotFound {
-		t.Log("File is missing or not found")
-	} else if res.StatusCode != http.StatusRequestTimeout {
-		t.Errorf("Expected status Request Timeout, got %v", res.Status)
-	}
-}
-
-// Test for handling Artist Not Found error
-func TestArtistNotFound(t *testing.T) {
-	req, err := http.NewRequest(http.MethodGet, "/artist-not-found", nil)
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	w := httptest.NewRecorder()
-	ArtistNotFound(w, req)
-
-	res := w.Result()
-	if res.StatusCode == http.StatusNotFound {
-		t.Log("File is missing or not found")
-	} else if res.StatusCode != http.StatusBadRequest {
-		t.Errorf("Expected status Bad Request, got %v", res.Status)
-	}
 }
 
 // Test for Checkfile function

@@ -19,6 +19,7 @@ var (
 	SuggestionItems []Suggestion    // Slice to store all suggestion items
 	Artists         []models.Artist // Slice of Artist structs to store fetched artists
 	err             error
+	FetchingError   bool
 )
 
 // GenerateSuggestions fetches artist data and generates suggestions for autocomplete.
@@ -27,6 +28,7 @@ func GenerateSuggestions() {
 	Artists, err = api.FetchArtists()
 	if err != nil {
 		fmt.Println("Error fetching artists:", err)
+		FetchingError = true
 		return
 	}
 

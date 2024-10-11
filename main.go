@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"groupie-tracker/autocomplete"
 	"groupie-tracker/handlers"
@@ -12,7 +13,13 @@ import (
 func router(w http.ResponseWriter, r *http.Request) {
 	// Check internet connectivity; if not connected, handle the "no internet" response.
 	if !handlers.CheckInternetConnectivity() {
-		handlers.Nointernetconnection(w, r)
+		handlers.ErrorRenderPage(w, r, http.StatusRequestTimeout, "Errortemplate/internetconnection.html")
+		return
+	}
+
+	if autocomplete.FetchingError {
+		// Serve the internal server error page for a path indicating a server error.
+		handlers.InternalServerError(w, r)
 		return
 	}
 
@@ -30,13 +37,13 @@ func router(w http.ResponseWriter, r *http.Request) {
 		handlers.InternalServerError(w, r)
 	} else if r.URL.Path == "/wrongmethod" {
 		// Handle requests made using an incorrect HTTP method.
-		handlers.Wrongmethod(w, r)
+		handlers.ErrorRenderPage(w, r, http.StatusMethodNotAllowed, "Errortemplate/wrongmethodused.html")
 	} else if r.URL.Path == "/about" {
 		// Serve the "About Us" page when the path is "/about".
 		handlers.Aboutus(w, r)
 	} else if r.URL.Path == "/badrequest" {
 		// Handle cases where the artist is not found (bad request).
-		handlers.ArtistNotFound(w, r)
+		handlers.ErrorRenderPage(w, r, http.StatusBadRequest, "Errortemplate/Noaristfound.html")
 	} else if r.URL.Path == "/serch" {
 		// Handle artist autocomplete selection when a user clicks on a suggestion.
 		autocomplete.HandleAutocompleteSelection(w, r)
@@ -45,14 +52,19 @@ func router(w http.ResponseWriter, r *http.Request) {
 		autocomplete.HandleSearchSuggestions(w, r)
 	} else {
 		// Serve a 404 error page for unrecognized routes.
-		handlers.Error404(w, r)
+		handlers.ErrorRenderPage(w, r, http.StatusNotFound, "Errortemplate/error.html")
 	}
 }
 
 func main() {
-	autocomplete.GenerateSuggestions()
+	if len(os.Args) != 1 {
+		fmt.Println("Usage: go run .")
+		os.Exit(1)
+	}
 
 	mux := http.NewServeMux()
+
+	autocomplete.GenerateSuggestions()
 
 	mux.HandleFunc("/css/", handlers.StaticServer)
 	mux.HandleFunc("/fonts/", handlers.StaticServer)
@@ -68,20 +80,3 @@ func main() {
 		log.Fatal("ListenAndServe: ", err)
 	}
 }
-
-// Fetch and print data from the API used for testing purposes
-
-// 	dates, err := api.FetchDates()
-// 	if err != nil {
-// 	    fmt.Println("Error fetching dates:", err)
-// 	    return
-// 	}
-// 	fmt.Printf("Dates: %+v\n", dates) // Print dates to use the variable
-
-// 	relations, err := api.FetchRelations()
-// 	 if err != nil {
-// 	   fmt.Println("Error fetching relations:", err)
-// 	    return
-// 	}
-// 	fmt.Printf("Relations: %+v\n", relations) // Print relations to use the variable
-// }

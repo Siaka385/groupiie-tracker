@@ -1,9 +1,65 @@
 [
  {
-  "contents": "artist/band",
-  "name": "Foo Fighters",
+  "contents": "member",
+  "name": "Duff McKagan",
   "id": [
-   51
+   34
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Katheryn Elizabeth Hudson",
+  "id": [
+   11
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Katy Perry",
+  "id": [
+   11
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Remi Kabaka Jr.",
+  "id": [
+   39
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "jakarta-indonesia",
+  "id": [
+   28
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "kansas_city-usa",
+  "id": [
+   29
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "osaka-japan",
+  "id": [
+   1
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "skanderborg-denmark",
+  "id": [
+   22
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "yogyakarta-indonesia",
+  "id": [
+   4
   ]
  }
 ]

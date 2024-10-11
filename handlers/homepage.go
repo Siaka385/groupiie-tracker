@@ -48,6 +48,7 @@ func Homepage(w http.ResponseWriter, r *http.Request) {
 	artists, err := api.FetchArtists()
 	if err != nil {
 		fmt.Println("Error fetching artists:", err)
+		http.Redirect(w, r, "/500", http.StatusFound)
 		return
 	}
 
@@ -58,9 +59,8 @@ func Homepage(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path == "/explore" {
 		isfilepresent, _ := Checkfile("./", "explore.html")
 		if !isfilepresent {
-			http.Redirect(w, r, "/404", http.StatusFound)
+			http.Redirect(w, r, "/500", http.StatusFound)
 			return
-
 		}
 		tmp, _ := template.ParseFiles("explore.html")
 
@@ -69,9 +69,8 @@ func Homepage(w http.ResponseWriter, r *http.Request) {
 	}
 	isfilepresent, _ := Checkfile("./", "index.html")
 	if !isfilepresent {
-		http.Redirect(w, r, "/404", http.StatusFound)
+		http.Redirect(w, r, "/500", http.StatusFound)
 		return
-
 	}
 	tmp, _ := template.ParseFiles("index.html")
 
