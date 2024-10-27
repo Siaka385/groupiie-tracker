@@ -1,23 +1,296 @@
 [
  {
   "contents": "member",
-  "name": "Duff McKagan",
+  "name": " Jarad Higgins",
   "id": [
-   34
-  ]
- },
- {
-  "contents": "member",
-  "name": "Katheryn Elizabeth Hudson",
-  "id": [
-   11
+   24
   ]
  },
  {
   "contents": "artist/band",
-  "name": "Katy Perry",
+  "name": "Alec Benjamin",
   "id": [
-   11
+   26
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Billie Joe Armstrong",
+  "id": [
+   44
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Bob Jefferson",
+  "id": [
+   2
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "DJ Yella",
+  "id": [
+   35
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Gary Maurice Lucas Jr.",
+  "id": [
+   7
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Glyn Jones",
+  "id": [
+   37
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "J. Cole",
+  "id": [
+   31
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Jacob Hemphill",
+  "id": [
+   2
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Jacques Bermon Webster II",
+  "id": [
+   30
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Jahseh Dwayne Ricardo Onfroy",
+  "id": [
+   5
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "James Hetfield",
+  "id": [
+   45
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "James Valentine",
+  "id": [
+   47
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Jamie Cook",
+  "id": [
+   37
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Jamie Hewlett",
+  "id": [
+   39
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Jared Leto",
+  "id": [
+   22
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Jeff Ament",
+  "id": [
+   10
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Jermaine Lamarr Cole",
+  "id": [
+   31
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Jesse Carmichael",
+  "id": [
+   47
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Jimi Hendrix",
+  "id": [
+   16
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Jimmy Page",
+  "id": [
+   15
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Joe Hahn",
+  "id": [
+   41
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Joe Perry",
+  "id": [
+   19
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Joe Trohman",
+  "id": [
+   38
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Joey Kramer",
+  "id": [
+   19
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "John Bonham",
+  "id": [
+   15
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "John Daecon",
+  "id": [
+   1
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "John Illsley",
+  "id": [
+   20
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "John Paul Jones",
+  "id": [
+   15
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Jonny Buckland",
+  "id": [
+   46
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Josh Dun",
+  "id": [
+   48
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Josh Klinghoffer",
+  "id": [
+   42
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Joyner Lucas",
+  "id": [
+   7
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Juice Wrld",
+  "id": [
+   24
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Júlio Rasec",
+  "id": [
+   21
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Larry Mullen Jr.",
+  "id": [
+   36
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Malcolm James McCormick",
+  "id": [
+   6
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Matthias Jabs",
+  "id": [
+   4
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Mick Jagger ",
+  "id": [
+   49
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "PJ Morton",
+  "id": [
+   47
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Pearl Jam",
+  "id": [
+   10
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Rami Jaffee",
+  "id": [
+   51
   ]
  },
  {
@@ -25,6 +298,34 @@
   "name": "Remi Kabaka Jr.",
   "id": [
    39
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Robert Trujillo",
+  "id": [
+   45
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "SOJA",
+  "id": [
+   2
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "The Jimi Hendrix Experience",
+  "id": [
+   16
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Tyler Joseph",
+  "id": [
+   48
   ]
  },
  {
@@ -36,9 +337,9 @@
  },
  {
   "contents": "location",
-  "name": "kansas_city-usa",
+  "name": "nagoya-japan",
   "id": [
-   29
+   1
   ]
  },
  {
@@ -50,16 +351,26 @@
  },
  {
   "contents": "location",
-  "name": "skanderborg-denmark",
+  "name": "rio_de_janeiro-brazil",
   "id": [
-   22
+   21,
+   23,
+   37,
+   42
   ]
  },
  {
   "contents": "location",
-  "name": "yogyakarta-indonesia",
+  "name": "saitama-japan",
   "id": [
-   4
+   1
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "san_jose-costa_rica",
+  "id": [
+   51
   ]
  }
 ]

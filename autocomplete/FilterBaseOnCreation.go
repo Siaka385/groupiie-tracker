@@ -28,6 +28,11 @@ func CreationDate(yearStr string, w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
+	if len(Artists) == 0 {
+		http.Redirect(w, r, "/badrequest", http.StatusFound)
+		return
+	}
+
 	// Set the title and page description dynamically based on the year
 	titlePage := "Iconic Bands Created in " + yearStr
 	pageDescription := "Dive into the vibrant world of music from " + yearStr + "! Explore the legendary bands that emerged this year and discover how their unique sounds and styles shaped the music landscape, leaving an indelible mark on generations to come."

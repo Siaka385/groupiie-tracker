@@ -29,9 +29,6 @@ func router(w http.ResponseWriter, r *http.Request) {
 	} else if r.URL.Path == "/artist" {
 		// Serve the artist information page when the path is "/artist".
 		handlers.Artinfo(w, r)
-	} else if r.URL.Path == "/search" {
-		// Handle manual artist searches entered by the user through the search bar.
-		handlers.HandleManualSearch(w, r)
 	} else if r.URL.Path == "/500" {
 		// Serve the internal server error page for a path indicating a server error.
 		handlers.InternalServerError(w, r)
@@ -50,6 +47,8 @@ func router(w http.ResponseWriter, r *http.Request) {
 	} else if r.URL.Path == "/searchy" {
 		// Handle search suggestions for artists based on partial input from the user.
 		autocomplete.HandleSearchSuggestions(w, r)
+	} else if r.URL.Path == "/searchresult" {
+		autocomplete.SearchPageHandler(w, r)
 	} else {
 		// Serve a 404 error page for unrecognized routes.
 		handlers.ErrorRenderPage(w, r, http.StatusNotFound, "Errortemplate/error.html")

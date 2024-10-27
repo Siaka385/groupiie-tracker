@@ -1,5 +1,5 @@
 
-# Groupie-Tracker
+# Groupie-Tracker-Search-bar
 
 Groupie-Tracker is a web application that provides information about musical artists, including their locations, concert dates, and band members. This application fetches data from an external API and presents it in a user-friendly format, allowing users to explore various artists and their concert details.
 
@@ -108,7 +108,6 @@ This project is licensed under the MIT License.
 
 - Add pagination to artist listings.
 - Improve UI/UX with better mobile responsiveness.
-- Improve on autocomplete functionalty
 - Implement caching to reduce API requests and improve performance.
 - Add more error handling and logging for debugging purposes.
 

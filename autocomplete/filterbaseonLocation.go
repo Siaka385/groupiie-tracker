@@ -26,6 +26,11 @@ func Locations(location string, w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
+	if len(ids) == 0 {
+		http.Redirect(w, r, "/badrequest", http.StatusFound)
+		return
+	}
+
 	// Loop through the artist IDs and match them with the corresponding artists
 	for h := 0; h < len(ids); h++ {
 		for j := 0; j < len(Artists); j++ {

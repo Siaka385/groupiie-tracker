@@ -19,6 +19,11 @@ func FirstAlbums(albumDate string, w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
+	if len(filteredBands) == 0 {
+		http.Redirect(w, r, "/badrequest", http.StatusFound)
+		return
+	}
+
 	// Set the title and description dynamically based on the album release date
 	titlePage := "Debut Band(s) of " + albumDate
 	pageDescription := "Explore the bands that made their mark with debut albums released on " + albumDate + ". Each of these talented groups embarked on their musical journey, shaping the sounds of their time."

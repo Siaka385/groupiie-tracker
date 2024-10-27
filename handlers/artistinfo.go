@@ -24,6 +24,7 @@ func Artinfo(w http.ResponseWriter, r *http.Request) {
 	name := r.URL.Query().Get("id")
 	id, err := strconv.Atoi(name)
 	if err != nil {
+
 		http.Redirect(w, r, "/badrequest", http.StatusFound)
 		return
 	}

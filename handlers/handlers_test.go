@@ -35,23 +35,23 @@ func TestHomepage(t *testing.T) {
 	testHandler(t, http.MethodGet, "/", Homepage, http.StatusOK)
 }
 
-// Test for the Search Bar functionality
-func TestSearchBar(t *testing.T) {
-	req, err := http.NewRequest(http.MethodGet, "/search?search=test artist", nil)
-	if err != nil {
-		t.Fatal(err)
-	}
+// // Test for the Search Bar functionality
+// func TestSearchBar(t *testing.T) {
+// 	req, err := http.NewRequest(http.MethodGet, "/search?search=test artist", nil)
+// 	if err != nil {
+// 		t.Fatal(err)
+// 	}
 
-	w := httptest.NewRecorder()
-	HandleManualSearch(w, req)
+// 	w := httptest.NewRecorder()
+// 	HandleManualSearch(w, req)
 
-	res := w.Result()
-	if res.StatusCode == http.StatusFound {
-		t.Log("Redirected to:", res.Header.Get("Location"))
-	} else if res.StatusCode != http.StatusFound {
-		t.Errorf("Expected status Found, got %v", res.Status)
-	}
-}
+// 	res := w.Result()
+// 	if res.StatusCode == http.StatusFound {
+// 		t.Log("Redirected to:", res.Header.Get("Location"))
+// 	} else if res.StatusCode != http.StatusFound {
+// 		t.Errorf("Expected status Found, got %v", res.Status)
+// 	}
+// }
 
 // Test for the Artist Info page
 func TestArtinfo(t *testing.T) {
