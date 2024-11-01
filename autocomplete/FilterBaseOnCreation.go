@@ -29,7 +29,7 @@ func CreationDate(yearStr string, w http.ResponseWriter, r *http.Request) {
 	}
 
 	if len(Artists) == 0 {
-		http.Redirect(w, r, "/badrequest", http.StatusFound)
+		Error404(w, r)
 		return
 	}
 
@@ -48,7 +48,7 @@ func CreationDate(yearStr string, w http.ResponseWriter, r *http.Request) {
 	isFilePresent, _ := handlers.Checkfile("./", "band_search.html")
 	if !isFilePresent {
 		// If the file is not present, redirect to a 404 page
-		http.Redirect(w, r, "/404", http.StatusFound)
+		Error500(w, r)
 		return
 	}
 

@@ -31,13 +31,13 @@ Groupie-Tracker retrieves its data from the [Groupie Trackers API](https://group
 1. Clone the repository:
 
    ```bash
-   git clone https://learn.zone01kisumu.ke/git/tesiaka/groupie-tracker.git
+   git clone https://learn.zone01kisumu.ke/git/tesiaka/groupie-tracker-search-bar.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd groupie-tracker
+   cd groupie-tracker-search-bar
    ```
 
 3. Install dependencies:
@@ -79,11 +79,13 @@ Groupie-Tracker retrieves its data from the [Groupie Trackers API](https://group
 ### Search Functionality
 
 - **Manual Artist Search**: Users can search for artists using the search bar. The `searchartist.go` file handles the manual search functionality, where the input is compared with the list of artists retrieved from the API. If a match is found, the user is redirected to the detailed artist information page.
+- **suggestion on Artist Search**: Users are able to get suggestion on keywords they input on the searchbar.
 
 ### Error Handling
 
 The application includes custom error handling for various scenarios:
 
+--**400 page**: Displays when a user request for something that is inavlid to server functionality
 - **404 Page**: Displayed when the requested page is not found.
 - **500 Page**: Shown when there is a server error, with a template defined in `Errortemplate/error500.html`.
 - **Wrong Method Page**: Displays when a user tries to access a route with an invalid HTTP method, using the template in `Errortemplate/wrongmethodused.html`.

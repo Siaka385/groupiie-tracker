@@ -6,7 +6,6 @@ import (
 	"io"
 	"net/http"
 	"os"
-	"sort"
 	"strings"
 )
 
@@ -18,6 +17,7 @@ type RequestData struct {
 func HandleSearchSuggestions(w http.ResponseWriter, r *http.Request) {
 	// Only allow POST method for search suggestions
 	if r.Method != "POST" {
+
 		http.Error(w, "wrong method", http.StatusMethodNotAllowed) // Return error if method is not POST
 		return
 	}
@@ -25,6 +25,7 @@ func HandleSearchSuggestions(w http.ResponseWriter, r *http.Request) {
 	// Read the request body to retrieve the search key
 	body, err := io.ReadAll(r.Body)
 	if err != nil {
+		Error500(w, r)
 		http.Error(w, "Unable to read request body", http.StatusBadRequest) // Handle error in reading request body
 		return
 	}
@@ -33,6 +34,7 @@ func HandleSearchSuggestions(w http.ResponseWriter, r *http.Request) {
 	var item RequestData
 	err = json.Unmarshal(body, &item)
 	if err != nil {
+		Error500(w, r)
 		http.Error(w, "Invalid JSON", http.StatusBadRequest) // Handle error if the request body contains invalid JSON
 		return
 	}
@@ -55,10 +57,7 @@ func GenerateSearchSuggestions(m string) {
 		}
 	}
 
-	sort.Slice(autocompleteitems, func(i, j int) bool {
-		return autocompleteitems[i].Name < autocompleteitems[j].Name
-	})
-
+	autocompleteitems = SortSlices(autocompleteitems, m)
 	// Marshal the matching suggestions into JSON format
 	jsondata, err := json.MarshalIndent(autocompleteitems, "", " ")
 	if err != nil {
@@ -70,4 +69,21 @@ func GenerateSearchSuggestions(m string) {
 	if err != nil {
 		fmt.Println("failed to save JSON to file:")
 	}
+}
+
+func SortSlices(m []Suggestion, match string) []Suggestion {
+	var firstslice []Suggestion
+	var secondslice []Suggestion
+
+	for i := 0; i < len(m); i++ {
+		if strings.HasPrefix(strings.ToLower(m[i].Name), strings.ToLower(match)) {
+			firstslice = append(firstslice, m[i])
+		} else {
+			secondslice = append(secondslice, m[i])
+		}
+	}
+
+	firstslice = append(firstslice, secondslice...)
+
+	return firstslice
 }

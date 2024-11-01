@@ -13,7 +13,7 @@ import (
 func router(w http.ResponseWriter, r *http.Request) {
 	// Check internet connectivity; if not connected, handle the "no internet" response.
 	if !handlers.CheckInternetConnectivity() {
-		handlers.ErrorRenderPage(w, r, http.StatusRequestTimeout, "Errortemplate/internetconnection.html")
+		handlers.ErrorRenderPage(w, r, http.StatusServiceUnavailable, "Errortemplate/internetconnection.html")
 		return
 	}
 
@@ -38,9 +38,11 @@ func router(w http.ResponseWriter, r *http.Request) {
 	} else if r.URL.Path == "/about" {
 		// Serve the "About Us" page when the path is "/about".
 		handlers.Aboutus(w, r)
-	} else if r.URL.Path == "/badrequest" {
+	} else if r.URL.Path == "/requestnotfound" {
 		// Handle cases where the artist is not found (bad request).
-		handlers.ErrorRenderPage(w, r, http.StatusBadRequest, "Errortemplate/Noaristfound.html")
+		handlers.ErrorRenderPage(w, r, http.StatusOK, "Errortemplate/Noaristfound.html")
+	} else if r.URL.Path == "/badrequest" {
+		handlers.ErrorRenderPage(w, r, http.StatusBadRequest, "Errortemplate/BadRequest.html")
 	} else if r.URL.Path == "/serch" {
 		// Handle artist autocomplete selection when a user clicks on a suggestion.
 		autocomplete.HandleAutocompleteSelection(w, r)

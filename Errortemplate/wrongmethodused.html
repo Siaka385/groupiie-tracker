@@ -29,9 +29,10 @@
     
     
     p {
-        font-family: "Bevan", cursive;
+        font-family: 'Sono', sans-serif;
+        font-weight: 400; 
         font-size: 70px;
-        margin: 10vh 0 0;
+        margin: 30vh 0 0;
         text-align: center;
         letter-spacing: 5px;
         background-color:white;
@@ -41,9 +42,9 @@
         -moz-background-clip: text;
         background-clip: text;
     
-        span {
-            font-size: 1.2em;
-        }
+    }
+    span {
+        font-size: 1.2em;
     }
     
     code {
@@ -80,12 +81,13 @@
         margin-top: 10px;
         display: inline-block;
     }
-    @media screen and (max-width: 880px) {
+  
+
+    @media screen and (max-width: 600px) {
         p {
-            font-size: 14vw;
+            font-size: 35px;
         }
     }
-    
  
 </style>
 
@@ -121,24 +123,11 @@
     </head>
     
     <body>
-
-        <p>HTTP: <span>405</span></p>
-        <code>
-          <span>this_page</span>.<em>method_not_allowed</em> = true;
-        </code>
-        <code>
-          <span>if</span> (<b>method_not_supported</b>) {
-            <em>alert</em>(<i>"The method you used is not allowed on this page."</i>);
-          }
-        </code>
-        <code>
-          <span>else if</span> (<b>we_screwed_up</b>) {
-            <em>alert</em>(<i>"We're really sorry about that. Please try another method."</i>);
-            <span>window</span>.<em>location</em> = home;
-          }
-        </code>
-        <center><a href="/">HOME</a></center>
+        <p><span>405: Method Not Allowed</span></p>
+        <code>The requested method is not allowed for this resource. Please check your connection return to the homepage.</code>
+        <center><a href="/">RETURN TO HOMEPAGE</a></center>
         
+
 
 
     </body>

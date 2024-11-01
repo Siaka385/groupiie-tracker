@@ -29,9 +29,10 @@
     
     
     p {
-        font-family: "Bevan", cursive;
-        font-size: 40px;
-        margin: 10vh 0 0;
+        font-family: 'Sono', sans-serif;
+        font-weight: 400; 
+        font-size: 70px;
+        margin: 30vh 0 0;
         text-align: center;
         letter-spacing: 5px;
         background-color:white;
@@ -41,9 +42,9 @@
         -moz-background-clip: text;
         background-clip: text;
     
-        span {
-            font-size: 1.2em;
-        }
+    }
+    span {
+        font-size: 1.2em;
     }
     
     code {
@@ -80,12 +81,13 @@
         margin-top: 10px;
         display: inline-block;
     }
-    @media screen and (max-width: 880px) {
+  
+
+    @media screen and (max-width: 600px) {
         p {
-            font-size: 20px;
+            font-size: 35px;
         }
     }
-    
  
 </style>
 
@@ -122,22 +124,10 @@
     
     <body>
 
-        <p>408 Request Timeout: <span>Unable to reach the internet</span></p>
-<code>
-  <span>this_page</span>.<em>No_internet</em> = true;
-</code>
-<code>
-  <span>if</span> (<b>No_internet</b>) {
-    <em>alert</em>(<i>"I can't control your internet,only my own.Please try again"</i>);
-  }
-</code>
-<code>
-  <span>else if</span> (<b>network_restored</b>) {
-    <em>alert</em>(<i>"Connection restored! You can continue browsing."</i>);
-    <span>window</span>.<em>location</em> = '/';
-  }
-</code>
-<center><a href="/">RETURN TO HOME</a></center>
+        <p><span>503 service Unavailable</span></p>
+        <code>We're unable to fetch/display content due to a poor or no internet connection. Please make sure you have a stable internet connection and return to the homepage.</code>
+        <center><a href="/">RETURN TO HOMEPAGE</a></center>
+        
 
 
 

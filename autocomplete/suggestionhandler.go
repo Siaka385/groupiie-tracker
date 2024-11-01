@@ -10,6 +10,11 @@ import (
 func HandleAutocompleteSelection(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Query().Get("search")
 
+	if path == "" {
+		http.Redirect(w, r, "/badrequest", http.StatusFound)
+		return
+	}
+
 	if CheckIfCreationdate(path) {
 		CreationDate(path, w, r)
 	} else if CheckFirstAlbum(path) {

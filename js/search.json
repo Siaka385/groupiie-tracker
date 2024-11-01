@@ -1,310 +1,58 @@
 [
  {
-  "contents": "member",
-  "name": " Jarad Higgins",
-  "id": [
-   24
-  ]
- },
- {
-  "contents": "artist/band",
-  "name": "Alec Benjamin",
-  "id": [
-   26
-  ]
- },
- {
-  "contents": "member",
-  "name": "Billie Joe Armstrong",
-  "id": [
-   44
-  ]
- },
- {
-  "contents": "member",
-  "name": "Bob Jefferson",
-  "id": [
-   2
-  ]
- },
- {
-  "contents": "member",
-  "name": "DJ Yella",
-  "id": [
-   35
-  ]
- },
- {
-  "contents": "member",
-  "name": "Gary Maurice Lucas Jr.",
-  "id": [
-   7
-  ]
- },
- {
-  "contents": "member",
-  "name": "Glyn Jones",
-  "id": [
-   37
-  ]
- },
- {
-  "contents": "artist/band",
-  "name": "J. Cole",
-  "id": [
-   31
-  ]
- },
- {
-  "contents": "member",
-  "name": "Jacob Hemphill",
-  "id": [
-   2
-  ]
- },
- {
-  "contents": "member",
-  "name": "Jacques Bermon Webster II",
-  "id": [
-   30
-  ]
- },
- {
-  "contents": "member",
-  "name": "Jahseh Dwayne Ricardo Onfroy",
-  "id": [
-   5
-  ]
- },
- {
-  "contents": "member",
-  "name": "James Hetfield",
-  "id": [
-   45
-  ]
- },
- {
-  "contents": "member",
-  "name": "James Valentine",
-  "id": [
-   47
-  ]
- },
- {
-  "contents": "member",
-  "name": "Jamie Cook",
-  "id": [
-   37
-  ]
- },
- {
-  "contents": "member",
-  "name": "Jamie Hewlett",
-  "id": [
-   39
-  ]
- },
- {
-  "contents": "member",
-  "name": "Jared Leto",
-  "id": [
-   22
-  ]
- },
- {
-  "contents": "member",
-  "name": "Jeff Ament",
-  "id": [
-   10
-  ]
- },
- {
-  "contents": "member",
-  "name": "Jermaine Lamarr Cole",
-  "id": [
-   31
-  ]
- },
- {
-  "contents": "member",
-  "name": "Jesse Carmichael",
-  "id": [
-   47
-  ]
- },
- {
-  "contents": "member",
-  "name": "Jimi Hendrix",
-  "id": [
-   16
-  ]
- },
- {
-  "contents": "member",
-  "name": "Jimmy Page",
-  "id": [
-   15
-  ]
- },
- {
-  "contents": "member",
-  "name": "Joe Hahn",
-  "id": [
-   41
-  ]
- },
- {
-  "contents": "member",
-  "name": "Joe Perry",
-  "id": [
-   19
-  ]
- },
- {
-  "contents": "member",
-  "name": "Joe Trohman",
-  "id": [
-   38
-  ]
- },
- {
-  "contents": "member",
-  "name": "Joey Kramer",
-  "id": [
-   19
-  ]
- },
- {
-  "contents": "member",
-  "name": "John Bonham",
-  "id": [
-   15
-  ]
- },
- {
-  "contents": "member",
-  "name": "John Daecon",
+  "contents": "location",
+  "name": "osaka-japan",
   "id": [
    1
   ]
  },
  {
-  "contents": "member",
-  "name": "John Illsley",
+  "contents": "location",
+  "name": "ostrava-czechia",
   "id": [
-   20
+   18
   ]
  },
  {
-  "contents": "member",
-  "name": "John Paul Jones",
+  "contents": "location",
+  "name": "oulu-finland",
   "id": [
-   15
+   22
   ]
  },
  {
-  "contents": "member",
-  "name": "Jonny Buckland",
+  "contents": "location",
+  "name": "oslo-norway",
   "id": [
-   46
+   27
   ]
  },
  {
-  "contents": "member",
-  "name": "Josh Dun",
+  "contents": "location",
+  "name": "omaha-usa",
+  "id": [
+   29
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "oakland-usa",
+  "id": [
+   34
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "oklahoma-usa",
   "id": [
    48
   ]
  },
  {
-  "contents": "member",
-  "name": "Josh Klinghoffer",
+  "contents": "location",
+  "name": "oregon-usa",
   "id": [
-   42
-  ]
- },
- {
-  "contents": "artist/band",
-  "name": "Joyner Lucas",
-  "id": [
-   7
-  ]
- },
- {
-  "contents": "artist/band",
-  "name": "Juice Wrld",
-  "id": [
-   24
-  ]
- },
- {
-  "contents": "member",
-  "name": "Júlio Rasec",
-  "id": [
-   21
-  ]
- },
- {
-  "contents": "member",
-  "name": "Larry Mullen Jr.",
-  "id": [
-   36
-  ]
- },
- {
-  "contents": "member",
-  "name": "Malcolm James McCormick",
-  "id": [
-   6
-  ]
- },
- {
-  "contents": "member",
-  "name": "Matthias Jabs",
-  "id": [
-   4
-  ]
- },
- {
-  "contents": "member",
-  "name": "Mick Jagger ",
-  "id": [
-   49
-  ]
- },
- {
-  "contents": "member",
-  "name": "PJ Morton",
-  "id": [
-   47
-  ]
- },
- {
-  "contents": "artist/band",
-  "name": "Pearl Jam",
-  "id": [
-   10
-  ]
- },
- {
-  "contents": "member",
-  "name": "Rami Jaffee",
-  "id": [
-   51
-  ]
- },
- {
-  "contents": "member",
-  "name": "Remi Kabaka Jr.",
-  "id": [
-   39
-  ]
- },
- {
-  "contents": "member",
-  "name": "Robert Trujillo",
-  "id": [
-   45
+   52
   ]
  },
  {
@@ -316,9 +64,856 @@
  },
  {
   "contents": "artist/band",
-  "name": "The Jimi Hendrix Experience",
+  "name": "Pink Floyd",
+  "id": [
+   3
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Scorpions",
+  "id": [
+   4
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "XXXTentacion",
+  "id": [
+   5
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Joyner Lucas",
+  "id": [
+   7
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Phil Collins",
+  "id": [
+   14
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Aerosmith",
+  "id": [
+   19
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Mamonas Assassinas",
+  "id": [
+   21
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Thirty Seconds to Mars",
+  "id": [
+   22
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Imagine Dragons",
+  "id": [
+   23
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Logic",
+  "id": [
+   25
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Bobby McFerrins",
+  "id": [
+   27
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Post Malone",
+  "id": [
+   29
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Travis Scott",
+  "id": [
+   30
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "J. Cole",
+  "id": [
+   31
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Mobb Deep",
+  "id": [
+   33
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Guns N' Roses",
+  "id": [
+   34
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Arctic Monkeys",
+  "id": [
+   37
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Fall Out Boy",
+  "id": [
+   38
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Gorillaz",
+  "id": [
+   39
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Red Hot Chili Peppers",
+  "id": [
+   42
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Coldplay",
+  "id": [
+   46
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Maroon 5",
+  "id": [
+   47
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Twenty One Pilots",
+  "id": [
+   48
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "The Rolling Stones",
+  "id": [
+   49
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "Foo Fighters",
+  "id": [
+   51
+  ]
+ },
+ {
+  "contents": "artist/band",
+  "name": "The Chainsmokers",
+  "id": [
+   52
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "John Daecon",
+  "id": [
+   1
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Roger Meddows-Taylor",
+  "id": [
+   1
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Mike Grose",
+  "id": [
+   1
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Doug Fogie",
+  "id": [
+   1
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Jacob Hemphill",
+  "id": [
+   2
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Bob Jefferson",
+  "id": [
+   2
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Ken Brownell",
+  "id": [
+   2
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Patrick O'Shea",
+  "id": [
+   2
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Hellman Escorcia",
+  "id": [
+   2
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Rafael Rodriguez",
+  "id": [
+   2
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Trevor Young",
+  "id": [
+   2
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "David Gilmour",
+  "id": [
+   3
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Roger Waters",
+  "id": [
+   3
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Nick Manson",
+  "id": [
+   3
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Bob Klose",
+  "id": [
+   3
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Rudolf Schenker",
+  "id": [
+   4
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Pawel Maciwoda",
+  "id": [
+   4
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Jahseh Dwayne Ricardo Onfroy",
+  "id": [
+   5
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Malcolm James McCormick",
+  "id": [
+   6
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Kendrick Lamar Duckworth",
+  "id": [
+   8
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Angus Young",
+  "id": [
+   9
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Stevie Young",
+  "id": [
+   9
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Axl Rose",
+  "id": [
+   9
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Stone Gossard",
+  "id": [
+   10
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Matt Cameron",
+  "id": [
+   10
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Katheryn Elizabeth Hudson",
+  "id": [
+   11
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Robyn Rihanna Fenty",
+  "id": [
+   12
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Mike Rutherford",
+  "id": [
+   13
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Tony Banks",
+  "id": [
+   13
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Phil Collins",
+  "id": [
+   13
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Chester Thompson",
+  "id": [
+   13
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "John Paul Jones",
+  "id": [
+   15
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Robert Plant",
+  "id": [
+   15
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "John Bonham",
+  "id": [
+   15
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Noel Redding",
   "id": [
    16
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Billy Cox",
+  "id": [
+   16
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Robin Gibb",
+  "id": [
+   17
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Roger Glover",
+  "id": [
+   18
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Steve Morse",
+  "id": [
+   18
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Don Airey",
+  "id": [
+   18
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Tom Hamilton",
+  "id": [
+   19
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Joey Kramer",
+  "id": [
+   19
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Joe Perry",
+  "id": [
+   19
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Brad Whitford",
+  "id": [
+   19
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Mark Knopfler",
+  "id": [
+   20
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "David Knopfler",
+  "id": [
+   20
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "John Illsley",
+  "id": [
+   20
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Dinho",
+  "id": [
+   21
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Bento Hinoto",
+  "id": [
+   21
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Júlio Rasec",
+  "id": [
+   21
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Sérgio Reoli",
+  "id": [
+   21
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Samuel Reis de Oliveira",
+  "id": [
+   21
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Jared Leto",
+  "id": [
+   22
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Shannon Leto",
+  "id": [
+   22
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Tomo Miličević",
+  "id": [
+   22
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Solon Bixler",
+  "id": [
+   22
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Dan Reynolds",
+  "id": [
+   23
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Daniel Wayne Sermon",
+  "id": [
+   23
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Sir Robert Bryson Hall II",
+  "id": [
+   25
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Bobby McFerrin",
+  "id": [
+   27
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Fadil El Ghoul",
+  "id": [
+   28
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Jacques Bermon Webster II",
+  "id": [
+   30
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Jermaine Lamarr Cole",
+  "id": [
+   31
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Chad Kroeger",
+  "id": [
+   32
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Mike Kroeger",
+  "id": [
+   32
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Brandon Kroeger",
+  "id": [
+   32
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Mitch Guindon",
+  "id": [
+   32
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Prodigy",
+  "id": [
+   33
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Havoc",
+  "id": [
+   33
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Axl Rose",
+  "id": [
+   34
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Richard Fortus",
+  "id": [
+   34
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "The D.O.C.",
+  "id": [
+   35
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Bono",
+  "id": [
+   36
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Adam Clayton",
+  "id": [
+   36
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Ivan McCormick",
+  "id": [
+   36
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Jamie Cook",
+  "id": [
+   37
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Nick O'Malley",
+  "id": [
+   37
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Andy Nicholson",
+  "id": [
+   37
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Glyn Jones",
+  "id": [
+   37
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Joe Trohman",
+  "id": [
+   38
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Damon Albarn",
+  "id": [
+   39
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Don Henley",
+  "id": [
+   40
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Bernie Leadon",
+  "id": [
+   40
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Chester Bennington",
+  "id": [
+   41
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Mike Shinoda",
+  "id": [
+   41
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Brad Delson",
+  "id": [
+   41
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Joe Hahn",
+  "id": [
+   41
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Rob Bourdon",
+  "id": [
+   41
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Anthony Kiedis",
+  "id": [
+   42
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Josh Klinghoffer",
+  "id": [
+   42
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Billie Joe Armstrong",
+  "id": [
+   44
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Tré Cool",
+  "id": [
+   44
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Robert Trujillo",
+  "id": [
+   45
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Jonny Buckland",
+  "id": [
+   46
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Will Champion",
+  "id": [
+   46
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "PJ Morton",
+  "id": [
+   47
   ]
  },
  {
@@ -329,10 +924,81 @@
   ]
  },
  {
-  "contents": "location",
-  "name": "jakarta-indonesia",
+  "contents": "member",
+  "name": "Josh Dun",
   "id": [
-   28
+   48
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Ron Wood",
+  "id": [
+   49
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Christopher Wolstenholme",
+  "id": [
+   50
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Dominic Howard ",
+  "id": [
+   50
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Dave Grohl",
+  "id": [
+   51
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Taylor Hawkins",
+  "id": [
+   51
+  ]
+ },
+ {
+  "contents": "member",
+  "name": "Tony Ann",
+  "id": [
+   52
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "north_carolina-usa",
+  "id": [
+   1,
+   17
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "georgia-usa",
+  "id": [
+   1,
+   5,
+   8,
+   40
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "los_angeles-usa",
+  "id": [
+   1,
+   30,
+   34,
+   42,
+   44
   ]
  },
  {
@@ -344,9 +1010,282 @@
  },
  {
   "contents": "location",
-  "name": "osaka-japan",
+  "name": "penrose-new_zealand",
   "id": [
    1
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "playa_del_carmen-mexico",
+  "id": [
+   2
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "papeete-french_polynesia",
+  "id": [
+   2
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "noumea-new_caledonia",
+  "id": [
+   2
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "london-uk",
+  "id": [
+   3,
+   15,
+   19,
+   26,
+   30,
+   32,
+   38,
+   40,
+   41,
+   46
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "lyon-france",
+  "id": [
+   3,
+   27
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "victoria-australia",
+  "id": [
+   4
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "new_south_wales-australia",
+  "id": [
+   4
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "yogyakarta-indonesia",
+  "id": [
+   4
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "bratislava-slovakia",
+  "id": [
+   4
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "california-usa",
+  "id": [
+   5,
+   6,
+   7,
+   11,
+   14,
+   22,
+   23,
+   25,
+   41,
+   42,
+   46,
+   48,
+   49,
+   49
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "sao_paulo-brazil",
+  "id": [
+   6,
+   8,
+   30,
+   37,
+   45,
+   46,
+   47,
+   50
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "san_isidro-argentina",
+  "id": [
+   6,
+   37
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "arizona-usa",
+  "id": [
+   7,
+   14,
+   49
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "stockholm-sweden",
+  "id": [
+   8,
+   10,
+   26,
+   32
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "lisbon-portugal",
+  "id": [
+   8,
+   23,
+   51
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "bilbao-spain",
+  "id": [
+   8
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "bogota-colombia",
+  "id": [
+   8,
+   37,
+   51
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "new_york-usa",
+  "id": [
+   9,
+   12,
+   15,
+   23,
+   25,
+   27,
+   28,
+   31,
+   40
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "dusseldorf-germany",
+  "id": [
+   9
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "copenhagen-denmark",
+  "id": [
+   10,
+   16,
+   24,
+   32
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "doha-qatar",
+  "id": [
+   11
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "minnesota-usa",
+  "id": [
+   11
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "illinois-usa",
+  "id": [
+   11,
+   13,
+   48
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "westcliff_on_sea-uk",
+  "id": [
+   13
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "gothenburg-sweden",
+  "id": [
+   16
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "florida-usa",
+  "id": [
+   17,
+   47,
+   47,
+   49
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "south_carolina-usa",
+  "id": [
+   17
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "boulogne_billancourt-france",
+  "id": [
+   18
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "sion-switzerland",
+  "id": [
+   18
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "zaragoza-spain",
+  "id": [
+   20
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "barcelona-spain",
+  "id": [
+   20
   ]
  },
  {
@@ -361,9 +1300,432 @@
  },
  {
   "contents": "location",
-  "name": "saitama-japan",
+  "name": "monchengladbach-germany",
   "id": [
-   1
+   22
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "skanderborg-denmark",
+  "id": [
+   22
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "napoca-romania",
+  "id": [
+   22
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "canton-usa",
+  "id": [
+   23
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "mexico_city-mexico",
+  "id": [
+   23,
+   39,
+   47,
+   50
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "monterrey-mexico",
+  "id": [
+   23
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "washington-usa",
+  "id": [
+   24,
+   28,
+   29,
+   31,
+   49
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "west_melbourne-australia",
+  "id": [
+   24,
+   25
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "missouri-usa",
+  "id": [
+   24
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "chicago-usa",
+  "id": [
+   24,
+   33,
+   34,
+   35,
+   39
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "madison-usa",
+  "id": [
+   25
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "toronto-canada",
+  "id": [
+   25,
+   28
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "boston-usa",
+  "id": [
+   25,
+   31,
+   39
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "glasgow-uk",
+  "id": [
+   26,
+   38
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "warsaw-poland",
+  "id": [
+   26,
+   27
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "sochaux-france",
+  "id": [
+   27
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "eindhoven-netherlands",
+  "id": [
+   27
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "colorado-usa",
+  "id": [
+   27,
+   28,
+   52
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "jakarta-indonesia",
+  "id": [
+   28
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "huizhou-china",
+  "id": [
+   28
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "changzhou-china",
+  "id": [
+   28
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "hong_kong-china",
+  "id": [
+   28,
+   44
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "aalborg-denmark",
+  "id": [
+   28
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "st_louis-usa",
+  "id": [
+   29
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "indianapolis-usa",
+  "id": [
+   29
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "rosemont-usa",
+  "id": [
+   29
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "toronto-usa",
+  "id": [
+   29,
+   31
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "montreal-usa",
+  "id": [
+   29
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "uniondale-usa",
+  "id": [
+   29
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "columbia-usa",
+  "id": [
+   29
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "santiago-chile",
+  "id": [
+   30,
+   37,
+   45,
+   47,
+   50
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "houston-usa",
+  "id": [
+   30,
+   34,
+   40
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "new_orleans-usa",
+  "id": [
+   30
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "brooklyn-usa",
+  "id": [
+   31,
+   35
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "montreal-canada",
+  "id": [
+   31
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "imola-italy",
+  "id": [
+   32
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "krakow-poland",
+  "id": [
+   32
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "minneapolis-usa",
+  "id": [
+   33
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "detroit-usa",
+  "id": [
+   33
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "charlotte-usa",
+  "id": [
+   34
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "inglewood-usa",
+  "id": [
+   34
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "windsor-canada",
+  "id": [
+   35
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "melbourne-australia",
+  "id": [
+   36,
+   43
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "groningen-netherlands",
+  "id": [
+   38
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "pico_rivera-usa",
+  "id": [
+   39
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "brixton-uk",
+  "id": [
+   41
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "rotselaar-belgium",
+  "id": [
+   41
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "florence-italy",
+  "id": [
+   42
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "burswood-australia",
+  "id": [
+   43
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "wellington-new_zealand",
+  "id": [
+   43
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "bangkok-thailand",
+  "id": [
+   44
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "seoul-south_korea",
+  "id": [
+   44
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "san_francisco-usa",
+  "id": [
+   45
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "buenos_aires-argentina",
+  "id": [
+   45,
+   50
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "porto_alegre-brazil",
+  "id": [
+   45,
+   46
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "belo_horizonte-brazil",
+  "id": [
+   45
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "gdynia-poland",
+  "id": [
+   48
   ]
  },
  {
@@ -371,6 +1733,20 @@
   "name": "san_jose-costa_rica",
   "id": [
    51
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "nickelsdorf-austria",
+  "id": [
+   51
+  ]
+ },
+ {
+  "contents": "location",
+  "name": "vancouver-canada",
+  "id": [
+   52
   ]
  }
 ]

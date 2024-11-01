@@ -23,10 +23,10 @@ function debouncing(keypressed) {
             // Map filtered suggestions to HTML
             data = data.map((item) => {
               return item["contents"] === "artist/band"
-                ? `<li><a class="suggestion-item" href="/artist?id=${item["id"][0]}">${item["name"]} - <span class="badge">${item["contents"]}</span></a></li>`
+                ? `<li><a class="suggestion-item" href="/artist?id=${item["id"][0]}">${item["name"]}  <span class="badge">${item["contents"]}</span></a></li>`
                 : item["contents"] === "member"
-                ? `<li><a class="suggestion-item" href="/serch?search=${item["id"][0]}-bandmember-${item["name"]}">${item["name"]} - <span class="badge">${item["contents"]}</span></a></li>`
-                : `<li><a class="suggestion-item" href="/serch?search=${item["name"]}">${item["name"]} - <span class="badge">${item["contents"]}</span></a></li>`;
+                ? `<li><a class="suggestion-item" href="/serch?search=${item["id"][0]}-bandmember-${item["name"]}">${item["name"]}  <span class="badge">${item["contents"]}</span></a></li>`
+                : `<li><a class="suggestion-item" href="/serch?search=${item["name"]}">${item["name"]}  <span class="badge">${item["contents"]}</span></a></li>`;
             });
             showSuggestions(data); // Show filtered suggestions
           } else {

@@ -26,48 +26,66 @@ type Bandinfo struct {
 }
 
 func MemberDisplay(w http.ResponseWriter, r *http.Request, path string) {
+	if !HandleBandMemberBadRequest(path) {
+		http.Redirect(w, r, "/badrequest", http.StatusFound)
+		return
+	}
+
 	members := strings.Split(path, "-")
+
 	id, _ := strconv.Atoi(strings.TrimSpace(members[0]))
 
 	// Fetch the list of artists
 	artists, err := api.FetchArtists()
 	if err != nil {
 		fmt.Println("Error fetching artists:", err)
-		http.Redirect(w, r, "/500", http.StatusFound)
+		Error500(w, r)
 		return
 	}
 
 	// Find the artist with the specified ID
 	var artistInfo models.Artist
-	found := false
+	ArtistFound := false
 	for _, musicArtist := range artists {
 		if musicArtist.ID == id {
 			artistInfo = musicArtist
-			found = true
+			ArtistFound = true
 			break
 		}
 	}
 
 	// If no artist found, redirect to 404
-	if !found {
-		http.Redirect(w, r, "/404error", http.StatusFound)
+	if !ArtistFound {
+		Error404(w, r)
+		return
+	}
+
+	MemberPresent := false
+
+	for i := 0; i < len(artistInfo.Members); i++ {
+		if strings.EqualFold(strings.TrimSpace(artistInfo.Members[i]), strings.TrimSpace(members[2])) {
+			MemberPresent = true
+		}
+	}
+	if !MemberPresent {
+		Error404(w, r)
 		return
 	}
 
 	// Fetch and set the artist's timeline (relations)
 	artistInfo.Relation = handlers.Timeline(id)
 	if artistInfo.Relation == nil {
-		http.Redirect(w, r, "/500", http.StatusFound)
+		Error500(w, r)
 		return
 	}
 	artistInfo.Locate = handlers.Locations(id)
 	if artistInfo.Locate == nil {
-		http.Redirect(w, r, "/500", http.StatusFound)
+		Error500(w, r)
 		return
 	}
 	artistInfo.Datess = handlers.Dates(id)
 	if artistInfo.Datess == nil {
-		http.Redirect(w, r, "/500", http.StatusFound)
+		Error500(w, r)
 		return
 	}
 
@@ -87,12 +105,25 @@ func MemberDisplay(w http.ResponseWriter, r *http.Request, path string) {
 	// Parse and execute the template with the artist information
 	tmpl, err := template.ParseFiles("bandmemberpage.html")
 	if err != nil {
-		http.Redirect(w, r, "/500", http.StatusFound)
+		Error500(w, r)
 		return
 	}
 
 	// Execute the template (no redirects after this point)
 	if err := tmpl.Execute(w, BandMemberInformation); err != nil {
-		http.Redirect(w, r, "/500", http.StatusFound)
+		Error500(w, r)
 	}
+}
+
+func HandleBandMemberBadRequest(m string) bool {
+	myslice := strings.Split(m, "-")
+
+	_, err := strconv.Atoi(myslice[0])
+	if err != nil {
+		return false
+	}
+	if myslice[1] != "bandmember" {
+		return false
+	}
+	return true
 }

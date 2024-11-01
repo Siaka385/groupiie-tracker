@@ -20,7 +20,7 @@ func FirstAlbums(albumDate string, w http.ResponseWriter, r *http.Request) {
 	}
 
 	if len(filteredBands) == 0 {
-		http.Redirect(w, r, "/badrequest", http.StatusFound)
+		Error404(w, r)
 		return
 	}
 
@@ -38,8 +38,8 @@ func FirstAlbums(albumDate string, w http.ResponseWriter, r *http.Request) {
 	// Check if the "band_search.html" file exists
 	isFilePresent, _ := handlers.Checkfile("./", "band_search.html")
 	if !isFilePresent {
-		// If the file is not present, redirect to a 404 page
-		http.Redirect(w, r, "/404", http.StatusFound)
+		// If the file is not present, redirect to a 500 page
+		Error500(w, r)
 		return
 	}
 

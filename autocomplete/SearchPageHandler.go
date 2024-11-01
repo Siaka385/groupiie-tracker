@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"os"
 	"strings"
+	"time"
 
 	"groupie-tracker/api"
 	"groupie-tracker/models"
@@ -33,12 +34,12 @@ type BandMember struct {
 }
 
 func SearchPageHandler(w http.ResponseWriter, r *http.Request) {
+	time.Sleep((time.Second * 1) / 2)
+
 	seachitem := r.FormValue("search")
 
 	for i := 0; i < len(SuggestionItems); i++ {
-
 		if strings.EqualFold(strings.TrimSpace(seachitem), strings.TrimSpace(SuggestionItems[i].Name)) {
-
 			if SuggestionItems[i].Contents == "member" {
 
 				http.Redirect(w, r, fmt.Sprintf("/serch?search=%v-bandmember-%v", SuggestionItems[i].Id[0], SuggestionItems[i].Name), http.StatusFound)
@@ -53,43 +54,42 @@ func SearchPageHandler(w http.ResponseWriter, r *http.Request) {
 				return
 
 			}
-
 		}
 	}
 
 	var Storesuggestion []Suggestion
 	jsonfile, err := os.Open("js/search.json")
 	if err != nil {
-		http.Redirect(w, r, "/500", http.StatusFound)
+		Error500(w, r)
 		return
 	}
 	defer jsonfile.Close()
 
 	content, err := io.ReadAll(jsonfile)
 	if err != nil {
-		http.Redirect(w, r, "/500", http.StatusFound)
+		Error500(w, r)
 		return
 	}
 
 	err = json.Unmarshal(content, &Storesuggestion)
 	if err != nil {
-		http.Redirect(w, r, "/500", http.StatusFound)
+		Error500(w, r)
 		return
 	}
 
 	if len(Storesuggestion) == 0 {
-		http.Redirect(w, r, "/badrequest", http.StatusFound)
+		http.Redirect(w, r, "/requestnotfound", http.StatusFound)
 		return
 	}
 
 	myartist, err := api.FetchArtists()
 	if err != nil {
-		http.Redirect(w, r, "/500", http.StatusFound)
+		Error500(w, r)
 		return
 	}
 
 	var searchPage SearchResultPage
-	searchPage.TitleMessage = `"` + seachitem + `"` + ", Not found.Please see below if any of the suggestions match your search:"
+	searchPage.TitleMessage = "Suggestions that match" + ` "` + seachitem + `"` + ``
 	for i := 0; i < len(Storesuggestion); i++ {
 		if Storesuggestion[i].Contents == "artist/band" {
 			for k := 0; k < len(myartist); k++ {
@@ -152,13 +152,13 @@ func SearchPageHandler(w http.ResponseWriter, r *http.Request) {
 	tmp, err := template.ParseFiles("SearchResultPage.html")
 	if err != nil {
 		fmt.Println(err)
-		http.Redirect(w, r, "/500", http.StatusFound)
+		Error500(w, r)
 		return
 	}
 
 	err = tmp.Execute(w, searchPage)
 	if err != nil {
-		http.Redirect(w, r, "/500", http.StatusFound)
+		Error500(w, r)
 		return
 	}
 }
